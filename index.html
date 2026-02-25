@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>そーふgame 公式サイト</title>
+    <meta name="description" content="そーふgame 公式ホームページ。ゲーム配信、Twitch・YouTube チャンネル情報をお届けします。">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@400;500;700;900&family=Orbitron:wght@400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- パーティクル背景 -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ナビゲーション -->
+    <nav id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-icon">🎮</span>
+                <span class="logo-text">そーふ<span class="logo-accent">game</span></span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">ホーム</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#platforms" class="nav-link">配信プラットフォーム</a></li>
+                <li><a href="#contact" class="nav-link">お問い合わせ</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="メニュー切替">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- モバイルメニュー -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-links">
+            <li><a href="#home" class="mobile-link">ホーム</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#platforms" class="mobile-link">配信プラットフォーム</a></li>
+            <li><a href="#contact" class="mobile-link">お問い合わせ</a></li>
+        </ul>
+    </div>
+
+    <!-- ヒーローセクション -->
+    <section id="home" class="hero-section">
+        <div class="hero-content">
+            <div class="hero-badge">🎮 Official Website</div>
+            <h1 class="hero-title">
+                <span class="hero-line1">そーふ</span>
+                <span class="hero-line2">game</span>
+            </h1>
+            <p class="hero-subtitle">公認WEBサイト</p>
+            <div class="hero-buttons">
+                <a href="https://www.twitch.tv/sofugames" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-twitch">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" />
+                    </svg>
+                    Twitchで視聴
+                </a>
+                <a href="https://youtube.com/channel/UC-TR65xtPa-mQalj1Oo8Jow" target="_blank" rel="noopener noreferrer"
+                    class="btn btn-youtube">
+                    <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                    </svg>
+                    YouTubeで視聴
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <span class="stat-icon">📡</span>
+                    <span class="stat-label">LIVE配信</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-icon">🎯</span>
+                    <span class="stat-label">ゲーム実況</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-icon">🌐</span>
+                    <span class="stat-label">マルチ配信</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <!-- Aboutセクション -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">ABOUT</span>
+                <h2 class="section-title">そーふgameについて</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-card about-main">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-icon">🎮</div>
+                        <h3>ゲーム配信者</h3>
+                        <p>Twitch と YouTube を中心に活動するゲーム配信者です。<br>
+                            様々なジャンルのゲームを楽しく配信しています。<br>
+                            一緒にゲームの世界を楽しみましょう！</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-icon">🟣</div>
+                        <h3>Twitch</h3>
+                        <p>メインの配信プラットフォーム。リアルタイムでチャットしながら一緒に盛り上がろう！</p>
+                    </div>
+                </div>
+                <div class="about-card">
+                    <div class="about-card-glow"></div>
+                    <div class="about-card-content">
+                        <div class="about-icon">🔴</div>
+                        <h3>YouTube Shorts</h3>
+                        <p>ショート動画を配信中！サクッと楽しめるゲームクリップをお届け！</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- プラットフォームセクション -->
+    <section id="platforms" class="platforms-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">PLATFORMS</span>
+                <h2 class="section-title">配信プラットフォーム</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="platform-cards">
+                <!-- Twitch -->
+                <a href="https://www.twitch.tv/sofugames" target="_blank" rel="noopener noreferrer"
+                    class="platform-card twitch-card" id="twitchCard">
+                    <div class="platform-bg"></div>
+                    <div class="platform-content">
+                        <div class="platform-icon-wrapper">
+                            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M11.571 4.714h1.715v5.143H11.57zm4.715 0H18v5.143h-1.714zM6 0L1.714 4.286v15.428h5.143V24l4.286-4.286h3.428L22.286 12V0zm14.571 11.143l-3.428 3.428h-3.429l-3 3v-3H6.857V1.714h13.714z" />
+                            </svg>
+                        </div>
+                        <h3 class="platform-name">Twitch</h3>
+                        <p class="platform-handle">@sofugames</p>
+                        <p class="platform-desc">リアルタイム配信でチャットと一体になろう</p>
+                        <div class="platform-link-text">
+                            チャンネルを見る
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="platform-shine"></div>
+                </a>
+
+                <!-- YouTube -->
+                <a href="https://youtube.com/channel/UC-TR65xtPa-mQalj1Oo8Jow" target="_blank" rel="noopener noreferrer"
+                    class="platform-card youtube-card" id="youtubeCard">
+                    <div class="platform-bg"></div>
+                    <div class="platform-content">
+                        <div class="platform-icon-wrapper">
+                            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z" />
+                            </svg>
+                        </div>
+                        <h3 class="platform-name">YouTube</h3>
+                        <p class="platform-handle">そーふgame</p>
+                        <p class="platform-desc">ショート動画でゲームの面白い瞬間をお届け</p>
+                        <div class="platform-link-text">
+                            チャンネルを見る
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="platform-shine"></div>
+                </a>
+
+                <!-- TwitchTracker -->
+                <a href="https://twitchtracker.com/sofugames/streams" target="_blank" rel="noopener noreferrer"
+                    class="platform-card tracker-card" id="trackerCard">
+                    <div class="platform-bg"></div>
+                    <div class="platform-content">
+                        <div class="platform-icon-wrapper">
+                            <svg class="platform-icon" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M3 13h2v-2H3zm0 4h2v-2H3zm0-8h2V7H3zm4 4h14v-2H7zm0 4h14v-2H7zM7 7v2h14V7z" />
+                            </svg>
+                        </div>
+                        <h3 class="platform-name">TwitchTracker</h3>
+                        <p class="platform-handle">配信履歴・統計</p>
+                        <p class="platform-desc">過去の配信履歴や統計データをチェック</p>
+                        <div class="platform-link-text">
+                            統計を見る
+                            <svg class="arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="platform-shine"></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- お問い合わせセクション -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">CONTACT</span>
+                <h2 class="section-title">お問い合わせ</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <div class="contact-card-glow"></div>
+                    <div class="contact-content">
+                        <p class="contact-text">お問い合わせはDiscordサーバーからお気軽にどうぞ！</p>
+                        <div class="contact-links">
+                            <a href="https://discord.gg/q5ceStbUxn" target="_blank" rel="noopener noreferrer"
+                                class="contact-link discord">
+                                <svg viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1981.3728.2924a.077.077 0 01-.0066.1276 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.4189-2.1569 2.4189zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.4189-2.1568 2.4189z" />
+                                </svg>
+                                <span>Discordサーバーに参加</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- フッター -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon">🎮</span>
+                    <span class="logo-text">そーふ<span class="logo-accent">game</span></span>
+                </div>
+                <div class="footer-links">
+                    <a href="https://www.twitch.tv/sofugames" target="_blank" rel="noopener noreferrer">Twitch</a>
+                    <a href="https://youtube.com/channel/UC-TR65xtPa-mQalj1Oo8Jow" target="_blank"
+                        rel="noopener noreferrer">YouTube</a>
+                    <a href="https://twitchtracker.com/sofugames/streams" target="_blank"
+                        rel="noopener noreferrer">TwitchTracker</a>
+                    <a href="https://discord.gg/q5ceStbUxn" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 そーふgame. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- 右下固定テキスト -->
+    <div class="fixed-note">ちなみにアイコンは初期のままがいいんだとか</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
