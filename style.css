@@ -4,26 +4,26 @@
 
 /* --- カスタムプロパティ --- */
 :root {
-    --bg-primary: #0a0a1a;
-    --bg-secondary: #0f0f2a;
-    --bg-card: rgba(15, 15, 42, 0.7);
-    --bg-card-hover: rgba(20, 20, 55, 0.85);
-    --text-primary: #e8e8f0;
-    --text-secondary: #9090b0;
-    --text-muted: #606080;
-    --accent-primary: #6c5ce7;
-    --accent-secondary: #a855f7;
-    --accent-glow: rgba(108, 92, 231, 0.3);
+    --bg-primary: #0a0a12;
+    --bg-secondary: #0f0f1a;
+    --bg-card: rgba(15, 15, 30, 0.7);
+    --bg-card-hover: rgba(25, 25, 40, 0.85);
+    --text-primary: #f0f0f0;
+    --text-secondary: #a0a0b8;
+    --text-muted: #606078;
+    --accent-primary: #ffea00;
+    --accent-secondary: #ffe033;
+    --accent-glow: rgba(255, 234, 0, 0.3);
     --twitch-color: #9146ff;
     --twitch-glow: rgba(145, 70, 255, 0.4);
     --youtube-color: #ff0000;
     --youtube-glow: rgba(255, 0, 0, 0.3);
     --tracker-color: #00c9a7;
     --tracker-glow: rgba(0, 201, 167, 0.3);
-    --gradient-primary: linear-gradient(135deg, #6c5ce7, #a855f7);
-    --gradient-hero: linear-gradient(180deg, #0a0a1a 0%, #151538 50%, #0a0a1a 100%);
-    --border-color: rgba(108, 92, 231, 0.15);
-    --border-glow: rgba(108, 92, 231, 0.4);
+    --gradient-primary: linear-gradient(135deg, #ffea00, #ffc400);
+    --gradient-hero: linear-gradient(180deg, #0a0a12 0%, #12121e 50%, #0a0a12 100%);
+    --border-color: rgba(255, 234, 0, 0.12);
+    --border-glow: rgba(255, 234, 0, 0.35);
     --card-radius: 20px;
     --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-medium: 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -274,7 +274,7 @@ img {
     transform: translate(-50%, -50%);
     width: 800px;
     height: 800px;
-    background: radial-gradient(circle, rgba(108, 92, 231, 0.08) 0%, transparent 70%);
+    background: radial-gradient(circle, rgba(255, 234, 0, 0.06) 0%, transparent 70%);
     border-radius: 50%;
     pointer-events: none;
 }
@@ -318,7 +318,7 @@ img {
     font-weight: 500;
     color: var(--accent-secondary);
     backdrop-filter: blur(10px);
-    background: rgba(108, 92, 231, 0.05);
+    background: rgba(255, 234, 0, 0.05);
     margin-bottom: 32px;
     animation: badgePulse 3s ease-in-out infinite;
 }
@@ -345,7 +345,7 @@ img {
 .hero-line1 {
     display: block;
     font-family: var(--font-main);
-    background: linear-gradient(135deg, #ffffff 0%, #c0c0e0 100%);
+    background: linear-gradient(135deg, #ffffff 0%, #e0e0d0 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -432,7 +432,7 @@ img {
 }
 
 .btn-outline:hover {
-    background: rgba(108, 92, 231, 0.1);
+    background: rgba(255, 234, 0, 0.1);
     border-color: var(--border-glow);
     transform: translateY(-2px);
 }

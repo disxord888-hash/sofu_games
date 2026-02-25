@@ -36,7 +36,7 @@ class ParticleSystem {
                 vy: (Math.random() - 0.5) * 0.3,
                 radius: Math.random() * 2 + 0.5,
                 opacity: Math.random() * 0.4 + 0.1,
-                hue: Math.random() > 0.5 ? 261 : 270,
+                hue: Math.random() > 0.5 ? 50 : 45,
             });
         }
     }
@@ -60,7 +60,7 @@ class ParticleSystem {
                     this.ctx.beginPath();
                     this.ctx.moveTo(this.particles[i].x, this.particles[i].y);
                     this.ctx.lineTo(this.particles[j].x, this.particles[j].y);
-                    this.ctx.strokeStyle = `hsla(261, 60%, 55%, ${opacity})`;
+                    this.ctx.strokeStyle = `hsla(50, 90%, 50%, ${opacity})`;
                     this.ctx.lineWidth = 0.5;
                     this.ctx.stroke();
                 }
